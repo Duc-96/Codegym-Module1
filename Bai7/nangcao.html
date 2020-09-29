@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Caculator</h1>
+    <form>
+        <input type="text" id="giatri1">
+        <input type="text" id="giatri2"><br><br>
+        <input type="button" onclick="tinhToan('+')" value=Addition(+)>
+        <input type="button" onclick="tinhToan('-')" value=Subtraction(-)>
+        <input type="button" onclick="tinhToan('*')" value=Multiplicatio(X)>
+        <input type="button" onclick="tinhToan('/')" value=Divison(/)>
+    </form>
+    <p>Kết quả là: <span id="ketqua"></span></p>
+    <script>
+            function tinhToan(toanTu) {
+                var toanHang1 = document.getElementById("giatri1").value
+                var toanHang2 = document.getElementById("giatri2").value
+                var phepTinh = toanHang1 + toanTu + toanHang2;
+                
+                var ketQua = eval(phepTinh)
+
+                document.getElementById("ketqua").innerHTML=ketQua
+            }
+    </script>
+</body>
+
+</html>
