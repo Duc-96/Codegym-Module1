@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ten">User <br> <br>
+    <input type="text" id="matkhau">Password
+
+    <script>
+        function ten(){
+            var ten=document.getElementById("ten").value;
+            if (ten=='Admin'){
+                document.write('Hãy nhập password')
+            }
+            else if (ten==null){
+                document.write('Chưa nhập tên')
+            }
+            else
+            document.write("Sai tên!Vui lòng nhập lại")
+        }
+    </script>
+</body>
+</html>
