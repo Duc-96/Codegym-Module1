@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 100%;
+            background-color: rgb(85, 13, 255);
+        }
+        input{
+            background-color: rgb(168, 228, 113);
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="4">
+                <input type="text" id="solieu">
+            </td>
+
+
+        </tr>
+        <tr>
+            <td>
+                <button onclick="nhapgiatri(1)">1</button>
+            </td>
+            <td>
+                <button onclick="nhapgiatri(2)">2</button>
+            </td>
+            <td>
+                <button onclick="nhapgiatri(3)">3</button>
+            </td>
+            <td>
+                <button onclick="nhapgiatri('+')">+</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="nhapgiatri(4)">4</button>
+            </td>
+            <td>
+                <button onclick="nhapgiatri(5)">5</button>
+            </td>
+            <td>
+                <button onclick="nhapgiatri(6)">6</button>
+            </td>
+            <td>
+                <button onclick="nhapgiatri('-')">-</button>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="nhapgiatri(7)">7</button>
+            </td>
+            <td>
+                <button onclick="nhapgiatri(8)">8</button>
+            </td>
+            <td>
+                <button onclick="nhapgiatri(9)">9</button>
+            </td>
+            <td>
+                <button onclick="nhapgiatri('*')">x</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="reset()">C</button>
+            </td>
+            <td>
+                <button onclick="nhapgiatri(0)">0</button>
+            </td>
+            <td>
+                <button onclick="tinhToan()">=</button>
+            </td>
+            <td>
+                <button onclick="nhapgiatri('/')">/</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function nhapgiatri(giatri) {
+            var pheptinh = document.getElementById("solieu").value
+            pheptinh += giatri
+            document.getElementById("solieu").value = pheptinh
+        }
+        function tinhToan() {
+            var tinhToan = document.getElementById("solieu").value;
+            ketQua = eval(tinhToan)
+            document.getElementById("solieu").value=ketQua
+        }
+        function reset(){
+            document.getElementById("solieu").value=""
+        }
+    </script>
+
+</body>
+
+</html>

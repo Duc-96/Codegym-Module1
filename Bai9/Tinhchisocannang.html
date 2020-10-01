@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Chiều cao <br>
+    <input type="nuber" id="chieucao"> <br><br>
+    Cân Nặng <br>
+    <input type="nuber" id="cannang"><br> <br>
+    <button onclick="BMI()">Kiểm tra</button>
+    <h4>Chỉ số BMI của bạn:<span id="ketqua"></span></h4>
+    <script>
+        function BMI(){
+        var chieucao=document.getElementById("chieucao").value;
+        var cannang=document.getElementById("cannang").value;
+        var BMI=cannang/(chieucao*chieucao)
+        if (BMI<18.5)
+        document.getElementById("ketqua").innerHTML=BMI+"<br>"+"<br>"+"Bạn quá gầy!Ăn nhiều vào nhé"
+        else if(BMI<25.0)
+        document.getElementById("ketqua").innerHTML=BMI+"<br>"+"<br>"+"Bạn bình thường"
+        else if(BMI<30)
+        document.getElementById("ketqua").innerHTML=BMI+"<br>"+"<br>"+"Bạn hơi béo"
+        else
+        document.getElementById("ketqua").innerHTML=BMI+"<br>"+"<br>"+"Bạn quá béo!Giảm cân đi"
+        }
+    </script>
+</body>
+</html>

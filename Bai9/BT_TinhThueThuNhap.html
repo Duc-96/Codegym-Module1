@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            background-color: rgb(187, 201, 162);
+        }
+        button{
+            background-color: rgb(71, 255, 71);
+        }
+    </style>
+</head>
+<body>
+    <h3>TÍNH THUẾ THU NHẬP CÁ NHÂN</h3>
+    Nhập Lương
+    <input type="number" id="tienluong">
+    <button onclick="tinhthue()">Tính Thuế</button>
+    <h3>Tiền thuế phải nộp: <span id="ketqua"></span></h3>
+<script>
+    function tinhthue(){
+        var tienluong=document.getElementById("tienluong").value 
+        var thue1=(tienluong*30)/100
+        var thue2=(tienluong*20)/100
+        var thue3=(tienluong*10)/100
+        if (tienluong>=15000000)
+            document.getElementById("ketqua").innerHTML=thue1
+            else if(tienluong>=10000000)
+                document.getElementById("ketqua").innerHTML=thue2
+            else if(tienluong>=7000000)
+                document.getElementById("ketqua").innerHTML=thue3
+            
+        else
+            document.getElementById("ketqua").innerHTML=""+"0"
+        
+    }
+</script>
+</body>
+</html>
