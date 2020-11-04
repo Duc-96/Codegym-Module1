@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      td {
+        text-align: center;
+        background-color: silver;
+        width: 50px;
+        height: 50px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="table"></table>
+
+    <button onclick="changeValue()">Change Value</button>
+
+    <script>
+      var mang = [
+        [".", ".", "."],
+        [".", ".", "."],
+        [".", ".", "."],
+      ];
+
+      var luotDanhThu = 1;
+
+      function changeValue() {
+        let hang;
+        let cot;
+
+        // Kiểm tra nếu nhập không hợp lệ yêu cầu nhập lại
+        do {
+          hang = +prompt("Nhập hàng:");
+          cot = +prompt("Nhập cột:");
+        } while (
+          hang >= mang.length ||
+          hang < 0 ||
+          cot >= mang.length ||
+          cot < 0 ||
+          mang[hang][cot] != "."
+        );
+
+        // Đánh dấu lên bàn cờ
+        mang[hang][cot] = luotDanhThu % 2 == 0 ? "X" : "O";
+
+        veBanCo();
+
+        kiemTraThangThua();
+
+        luotDanhThu++;
+      }
+
+      
+      function veBanCo() {
+        let tableInnerHtml = ``;
+
+        // Vẽ từng hàng
+        for (let i = 0; i < mang.length; i++) {
+          let trInnerHtml = ``;
+
+          // Vẽ từng cột trong hàng
+          for (let j = 0; j < mang[i].length; j++) {
+            trInnerHtml += `
+                        <td>${mang[i][j]}</td>
+                    `;
+          }
+
+          tableInnerHtml += `
+                    <tr>${trInnerHtml}</tr>
+                `;
+        }
+
+        console.log(tableInnerHtml);
+
+        document.getElementById("table").innerHTML = tableInnerHtml;
+      }
+
+      function kiemTraThangThua() {
+        // Kiểm tra theo hàng ngang
+        for (let hang = 0; hang <= mang.length - 1; hang++) {
+          if (mang[hang][0] == ".") {
+            continue;
+          }
+
+          if (mang[hang][0] == mang[hang][1] && mang[hang][0] == mang[hang][2])
+            alert(luotDanhThu % 2 == 0 ? "X win!" : "O win!");
+        }
+
+        // Kiểm tra theo hàng dọc
+        for (let cot = 0; cot <= mang.length - 1; cot++) {
+          if (mang[0][cot] == ".") {
+            continue;
+          }
+
+          if (mang[0][cot] == mang[1][cot] && mang[0][cot] == mang[2][cot])
+            alert(luotDanhThu % 2 == 0 ? "X win!" : "O win!");
+        }
+
+        // Kiểm tra theo 2 đường chéo
+        if (mang[1][1] != ".") {
+          // Kiểm theo theo đường chéo chính
+          if (mang[0][0] == mang[1][1] && mang[0][0] == mang[2][2]) {
+            alert(luotDanhThu % 2 == 0 ? "X win!" : "O win!");
+          }
+
+          // Kiểm tra theo đường chéo phụ
+          if (mang[0][2] == mang[1][1] && mang[0][2] == mang[2][0]) {
+            alert(luotDanhThu % 2 == 0 ? "X win!" : "O win!");
+          }
+        }
+      }
+
+      veBanCo();
+    </script>
+  </body>
+</html>

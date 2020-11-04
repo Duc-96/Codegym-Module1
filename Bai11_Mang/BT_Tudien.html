@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>DỊCH NGÔN NGỮ ANH VIỆT</h1>
+    <input id="nhapvao" type="text">
+    <button onclick="timkiem()">Tìm Kiếm</button> 
+    <h3>Kết quả tìm kiếm:<span id="ketqua"></span></h3>
+    <script>
+        function timkiem() {
+        var tuCanTim = document.getElementById("nhapvao").value;
+        var tiengAnh = ["hello", "bye",];
+        var tiengViet = ["xin chào", "tạm biệt"];
+        var ketQua
+        var i;
+        var j;
+            for (i = 0,j=0; i <= tiengAnh.length - 1,j<=tiengViet.length-1; j++,i++) {
+                if (tuCanTim == tiengAnh[i]) {
+                    ketQua=tiengViet[j]
+                    break;
+                }
+                else if(tuCanTim==tiengViet[j]){
+                    ketQua=tiengAnh[i]
+                    break;
+                }
+                else{
+                    ketQua="Không tìm thấy!Vui lòng thử lại"
+                }
+            }document.getElementById("ketqua").innerHTML = ketQua
+        } 
+    </script>
+</body>
+
+</html>

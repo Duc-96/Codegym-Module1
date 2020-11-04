@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mang = [[9, 2, 5], [4, 3, 7], [6, 8, 1]];
+        var mangMotChieu=[];
+        for(let hang in mang){
+            for(let cot in mang[hang]){
+                mangMotChieu.push(mang[hang][cot])
+            }
+        }
+        mangMotChieu.sort(function(a,b){
+            return a-b;
+        }) 
+        for(let hang in mang){
+            for(let cot in mang[hang]){
+                let chiSo=(3*hang) + +cot
+                mang[hang][cot]=mangMotChieu[chiSo]
+            }
+        }
+        console.log(mang)
+        document.write(mang)
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        chuoi = 'XinCHaoCacBan';
+        const CHUHOA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const CHUTHUONG = 'abcdefghijklmnopqrstuvwxyz';
+        var chuMoi = [];
+
+        for (var i = 0; i < chuoi.length; i++) {
+            if (CHUHOA.indexOf(chuoi[i]) >=0) {
+                chuMoi.push(chuoi[i].toLowerCase());
+            }
+            else if (CHUTHUONG.indexOf(chuoi[i]) >=0) {
+                chuMoi.push(chuoi[i].toUpperCase());
+            }
+            else {
+                chuMoi.push(chuoi[i]);
+            }
+        }
+        document.write(chuMoi.join(''));
+    </script>
+</body>
+
+</html>

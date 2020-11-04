@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="chuoi1" type="text">
+    <input id="chuoi2" type="text">
+    <button onclick="ketqua()">So Sanh</button>
+    <h3>Kết Quả: <span id="ketqua"></span></h3>
+    <script>
+        function ketqua(){
+            var chuoi1 = document.getElementById("chuoi1").value;
+            var chuoi2 = document.getElementById("chuoi2").value;
+            var mang1=chuoi1.split("")
+            var mang2=chuoi2.split("")
+            var ketQua;
+            var i;
+            var j;
+            if (mang1.length != mang2.length) {
+                ketQua="Sai"
+            }
+            else {
+                for ( i = 0, j = 0; i <= mang1.length - 1, j <= mang2.length - 1; i++, j++) {
+                    if (mang1[i] == mang2[i]) {
+                        ketQua = "Đúng"
+                    }
+                    else{
+                        ketQua = "Sai"
+                        break;
+                    }
+                }
+
+            
+            } document.getElementById("ketqua").innerHTML=ketQua
+        }
+           
+
+    </script>
+</body>
+
+</html>

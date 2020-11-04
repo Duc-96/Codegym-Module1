@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var mang = [[9, 2, 5], [4, 3, 7], [6, 8, 1]];
+        var tong = 0;
+        for (let hang = 0; hang <= mang.length - 1; hang++) {
+            for (let cot = 0; cot <= mang[cot].length - 1; cot++) {
+                if (mang[hang][cot] % 2 === 0) {
+                    tong += mang[hang][cot]
+
+                }
+            }
+            document.write(tong)
+        }
+    </script>
+</body>
+
+</html>

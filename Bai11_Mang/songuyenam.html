@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var chuoi = "CODEGYMQUANGTRI"
+        const NGUYENAM = "aeiouy";
+        var dem = 0;
+        for (let i = 0; i <= chuoi.length - 1; i++) {
+            if (NGUYENAM.indexOf(chuoi[i].toLowerCase()) >= 0) {
+                dem++;
+            }
+        }
+        document.write(dem)
+    </script>
+</body>
+
+</html>
