@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var hang=+prompt("Nhập hàng")
+        var cot=+prompt("Nhập cột")
+        for(let i=1;i<=cot;i++){
+            for(let j=1;j<=hang;j++){
+                if(i==1||i==cot||j==1||j==hang){
+                    document.write('*');continue;
+                }
+                document.write("&ensp;");
+            }
+            document.write('<br/>');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="nhapso" type="text">
+    <button onclick="ketQua">Nhập số</button>
+    <script>
+        function ketQua() {
+            var soNhapVao = document.getElementById("nhapso")
+            var giaiThua = 1
+            for (let i = soNhapVao; i > 0; i--) {
+                giaiThua *= i
+            }
+        }
+        ketQua();
+        document.write(giaiThua)
+    </script>
+</body>
+
+</html>

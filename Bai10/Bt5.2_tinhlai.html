@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var tienLai=0
+        var tienGoc=+prompt("Nhập Tiền Vay")
+        var laiSuat=+prompt("Nhập lãi suất")
+        var soThang=+prompt("Nhập số tháng")
+        for(let i=1;i<=soThang;i++){
+            tienLai+=((tienGoc+tienLai)*laiSuat)/100
+        }
+        document.write(tienLai)
+    </script>
+</body>
+</html>
