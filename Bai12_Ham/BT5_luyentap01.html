@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var tenCauThu = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        var chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        function hienThiChomSao(tenCauThu) {
+            let nhapTen = prompt("Nhập Tên Cầu Thủ Vào:")
+            for (let i = 0; i <= tenCauThu.length-1; i++) {
+                if (nhapTen == tenCauThu[i]) {
+                    let ketQua=chomSao[i]
+                   return ketQua
+                }
+                else{
+                   ketQua="không tìm thấy"
+                   return ketQua
+                }
+            }
+        }
+        document.write(hienThiChomSao(tenCauThu));
+    </script>
+</body>
+
+</html>

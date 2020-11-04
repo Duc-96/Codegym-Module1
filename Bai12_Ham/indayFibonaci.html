@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function inDaySoFibonaci(chiSo) {
+            if (chiSo == 1 || chiSo == 2)
+                return 1
+            return inDaySoFibonaci(chiSo - 1) + inDaySoFibonaci(chiSo - 2);
+        }
+        function inRaManHinh(num) {
+            for (let i = 1; i <= num; i++) {
+                document.write(inDaySoFibonaci(i)+"&nbsp");
+            }
+        }
+        inRaManHinh(30)
+    </script>
+</body>
+
+</html>

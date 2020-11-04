@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="nhapso" type="number">
+    <button onclick="kiemTraSoNguyenTo()"> KIỂM TRA </button>
+    <script>
+        function kiemTraSoNguyenTo(nhapSo) {
+            let nhapSo = +document.getElementById("nhapso").value
+            if(nhapSo%nhapSo==0){
+                document.write("sai")
+            }
+            
+        }
+       
+    </script>
+</body>
+
+</html>

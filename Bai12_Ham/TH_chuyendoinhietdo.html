@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <h3>CHUYỂN ĐỔI NHIỆT ĐỘ</h3>
+    <p>
+        <label>Nhập Độ F</label>
+        <input id="nhapdof" type="number" placeholder="Độ F"
+          oninput="chuyenDoiNhietDo(value)">
+    </p>
+    <p>Kết Quả: <span id="ketqua"></span></p>
+</form>
+
+<script>
+
+    function chuyenDoiNhietDo(doF) {
+        document.getElementById("ketqua").innerHTML= (doF-32) / 1.8;
+    }
+
+</script>
+</body>
+</html>
